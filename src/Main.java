@@ -9,9 +9,11 @@ public class Main {
         display(treeMap);
     }
 
-    private static void display(Map<String, Integer> treeMap) {
-        for (Map.Entry<String, Integer> entry : treeMap.entrySet())
-            System.out.println(entry.getKey() + " : " + entry.getValue());
+    private static String[] inputString() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a string : ");
+        String string = scanner.nextLine();
+        return string.split(" ");
     }
 
     private static Map<String, Integer> checkKeyInMap(String[] arr) {
@@ -28,10 +30,8 @@ public class Main {
         return treeMap;
     }
 
-    private static String[] inputString() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a string : ");
-        String string = scanner.nextLine();
-        return string.split(" ");
+    private static void display(Map<String, Integer> treeMap) {
+        for (Map.Entry<String, Integer> entry : treeMap.entrySet())
+            System.out.println(entry.getKey() + " : " + entry.getValue());
     }
 }
